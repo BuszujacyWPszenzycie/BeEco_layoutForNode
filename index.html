@@ -20,10 +20,12 @@
     <div class="header__top">
       <div class="header__container">
         <div class="header__container--left"></div>
-        <div class="header__container--center">
-          <i class="fa-solid fa-leaf header__icon"></i>
+
+        <a href=" #" class="header__container--center">
+          <i class=" fa-solid fa-leaf header__icon"></i>
           <h1 class="header__title"><span class="header__title--span">Be</span>Eco</h1>
-        </div>
+        </a>
+
         <div class="header__container--right"></div>
       </div>
 
@@ -32,7 +34,7 @@
         <div class="nav__container">
           <div class="nav__container--left"></div>
           <div class="nav__container--center">
-            <a href="" class="nav__item">o nas</a>
+            <a href="#about" class="nav__item">o nas</a>
           </div>
           <div class="nav__container--right"></div>
         </div>
@@ -40,7 +42,7 @@
         <div class="nav__container">
           <div class="nav__container--left"></div>
           <div class="nav__container--center">
-            <a href="" class="nav__item">wyszukiwarka</a>
+            <a href="#search" class="nav__item">wyszukiwarka</a>
           </div>
           <div class="nav__container--right"></div>
         </div>
@@ -84,42 +86,86 @@
   </header>
 
   <main class="main">
-    <section class="section about">
-      
+    <section class="section about" id="about">
+
+      <div class="card__wrapper">
+        <div class="card__item">
+          <div class="card__item--top card__item--top--one">
+            <i class="fa-solid fa-magnifying-glass card__item--icon"></i>
+          </div>
+          <div class="card__item--bottom">
+            <h3 class="card__item--title">Praktyczna wyszukiwarka</h3>
+            <button class="card__item--button">Sprawdź</button>
+          </div>
+
+        </div>
+      </div>
+      <div class="card__wrapper">
+        <div class="card__item">
+          <div class="card__item--top card__item--top--two">
+            <i class="fa-solid fa-palette card__item--icon"></i>
+          </div>
+          <div class="card__item--bottom">
+            <h3 class="card__item--title">Możliwość personalizacji</h3>
+            <button class="card__item--button">Sprawdź</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card__wrapper">
+        <div class="card__item">
+          <div class="card__item--top card__item--top--three">
+            <i class="fa-regular fa-address-book card__item--icon"></i>
+          </div>
+          <div class="card__item--bottom">
+            <h3 class="card__item--title">Sprawny kontakt</h3>
+            <button class="card__item--button">Sprawdź</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card__wrapper">
+        <div class="card__item">
+          <div class="card__item--top card__item--top--four">
+            <i class="fa-solid fa-users card__item--icon"></i>
+          </div>
+          <div class="card__item--bottom">
+            <h3 class="card__item--title">Bogata społeczność</h3>
+            <button class="card__item--button">Sprawdź</button>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section search" id="search">
+      <div class="search__wrapper">
+        <input type="text" class="search__input" placeholder="Wyszukaj...">
+        <a href="" class="search__button"><i class="fa-solid fa-magnifying-glass search__icon"></i></a>
+      </div>
+
+      <div class="search__iconsWrapper">
+        <div class="search__iconWrapper">
+          <span class="search__number search__number--one">0</span>
+          <p class="search__text">wyszukiwań</p>
+        </div>
+        <div class="search__iconWrapper">
+          <span class="search__number search__number--two">0</span>
+          <p class="search__text">zapisanych</p>
+        </div>
+        <div class="search__iconWrapper">
+          <span class="search__number search__number--three">0</span>
+          <p class="search__text">ponowień</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
+  <script src="/js/script.js"></script>
 </body>
 
 </html>
