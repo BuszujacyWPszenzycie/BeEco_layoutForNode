@@ -337,24 +337,25 @@ body {
   height: 100vh;
   background-color: rgb(34, 28, 70);
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .contact__left {
   margin-left: 10rem;
-  width: 75%;
+  width: 60%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.contact__center {
-  margin-left: 10rem;
-  width: 33%;
-  height: 100%;
+.contact__right {
+  height: 60%;
+  width: 40%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .contact__input {
   width: 600px;
@@ -443,4 +444,51 @@ body {
   color: rgb(34, 28, 70);
   border: 3px solid rgb(34, 28, 70);
   box-shadow: 8px 8px 8px 5px rgba(0, 0, 0, 0.3);
+}
+.contact__iconWrapper {
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 8px 8px 24px 0px rgba(0, 0, 0, 0.5);
+  margin: 4rem;
+  cursor: pointer;
+  transition: background-color 0.4s, color 0.4s, box-shadow 0.4s;
+}
+.contact__iconWrapper:hover {
+  background-color: #fdde35;
+  color: rgb(34, 28, 70);
+  box-shadow: 8px 8px 8px 5px rgba(0, 0, 0, 0.3);
+}
+.contact__iconWrapper:focus {
+  outline: none;
+  background-color: #fdde35;
+  color: rgb(34, 28, 70);
+  box-shadow: 8px 8px 8px 5px rgba(0, 0, 0, 0.3);
+}
+.contact__icon {
+  font-size: 10rem;
+  color: rgb(34, 28, 70);
+}
+
+.footer {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__item {
+  color: rgb(34, 28, 70);
+  font-size: 2rem;
+  display: flex;
+  padding: 3rem;
+}
+.footer__name {
+  margin-right: 1rem;
+}
+.footer__link {
+  margin-right: 2rem;
 }/*# sourceMappingURL=main.css.map */

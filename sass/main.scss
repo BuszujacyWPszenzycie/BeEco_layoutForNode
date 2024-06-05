@@ -387,10 +387,12 @@ body {
 	height: 100vh;
 	background-color: $navy;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	&__left {
 		margin-left: 10rem;
-		width: 75%;
+		width: 60%;
 		height: 100%;
 		display: flex;
 		justify-content: center;
@@ -398,14 +400,14 @@ body {
 		flex-direction: column;
 	}
 
-	&__center {
-		margin-left: 10rem;
-		width: 33%;
-		height: 100%;
+	&__right {
+		height: 60%;
+		width: 40%;
 		display: flex;
 		justify-content: center;
-		align-items: flex-start;
-		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+		// background-color: yellow;
 	}
 
 	&__input {
@@ -493,6 +495,61 @@ body {
 			border: 3px solid $navy;
 			box-shadow: 8px 8px 8px 5px rgba(0, 0, 0, 0.3);
 		}
+	}
+
+	&__iconWrapper {
+		width: 200px;
+		height: 200px;
+		background-color: $white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: inset 8px 8px 24px 0px rgba(0, 0, 0, 0.5);
+		margin: 4rem;
+		cursor: pointer;
+		transition: background-color 0.4s, color 0.4s, box-shadow 0.4s;
+
+		&:hover {
+			background-color: $yellow;
+			color: $navy;
+			// border: 3px solid $navy;
+			box-shadow: 8px 8px 8px 5px rgba(0, 0, 0, 0.3);
+		}
+
+		&:focus {
+			outline: none;
+			background-color: $yellow;
+			color: $navy;
+			// border: 3px solid $navy;
+			box-shadow: 8px 8px 8px 5px rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	&__icon {
+		font-size: 10rem;
+		color: $navy;
+	}
+}
+
+.footer {
+	width: 100vw;
+	height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__item {
+		color: $navy;
+		font-size: 2rem;
+		display: flex;
+		padding: 3rem;
+	}
+	&__name {
+		margin-right: 1rem;
+	}
+
+	&__link {
+		margin-right: 2rem;
 	}
 }
 
