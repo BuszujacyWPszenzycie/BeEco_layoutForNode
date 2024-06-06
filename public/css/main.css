@@ -479,6 +479,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #d3d2da;
 }
 .footer__item {
   color: rgb(34, 28, 70);
@@ -488,7 +489,36 @@ body {
 }
 .footer__name {
   margin-right: 1rem;
+  text-transform: uppercase;
+  color: #1b51dc;
+  font-weight: bold;
 }
 .footer__link {
-  margin-right: 2rem;
+  text-transform: uppercase;
+  color: rgb(34, 28, 70);
+  text-decoration: none;
+  position: relative;
+}
+.footer__link::after {
+  position: absolute;
+  content: "";
+  border: 1px solid rgb(34, 28, 70);
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+}
+.footer__link:hover::after {
+  animation-name: widthAnimation;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes widthAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
