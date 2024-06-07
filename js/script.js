@@ -1,39 +1,13 @@
-document.addEventListener('DOMContentLoaded', function () {
-	const searchNumberOne = document.querySelector('.search__number--one')
-	const searchNumberTwo = document.querySelector('.search__number--two')
-	const searchNumberThree = document.querySelector('.search__number--three')
-	const observer = new IntersectionObserver((entries, observer) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				incrementNumber(searchNumberOne, 4454, 1500)
-				observer.unobserve(searchNumberOne)
-			}
-			if (entry.isIntersecting) {
-				incrementNumber(searchNumberTwo, 454, 1500)
-				observer.unobserve(searchNumberTwo)
-			}
+const headerTextWrapper = document.querySelector('.header__bottom--textWrapper')
+const headerFittingContainer = document.querySelector('.header__bottom--textFittingContainer')
+const allNavItems = document.querySelectorAll('.nav__container')
+const headerTop = document.querySelector('.header__top')
 
-			if (entry.isIntersecting) {
-				incrementNumber(searchNumberThree, 1547, 1500)
-				observer.unobserve(searchNumberThree)
-			}
-		})
-	})
-
-	observer.observe(searchNumberOne)
-	observer.observe(searchNumberTwo)
-	observer.observe(searchNumberThree)
-})
-
-function incrementNumber(element, targetNumber, duration) {
-	let currentNumber = 0
-	const increment = targetNumber / (duration / 10) // Increment value per interval
-	const interval = setInterval(() => {
-		currentNumber += increment
-		if (currentNumber >= targetNumber) {
-			currentNumber = targetNumber
-			clearInterval(interval)
-		}
-		element.textContent = Math.floor(currentNumber)
-	}, 10) // Update every 10ms for smooth animation
+console.log(headerTop)
+const showNavFunction = () => {
+	headerTextWrapper.classList.add('active-text-wrapper')
+	headerFittingContainer.classList.add('active-header-fitting-container')
+	headerTop.classList.add('.active-header-top')
 }
+
+allNavItems[3].addEventListener('click', showNavFunction)
