@@ -421,6 +421,9 @@ body {
   font-size: 10rem;
   color: #0f2e0f;
 }
+.contact__link {
+  text-decoration: none;
+}
 
 .footer {
   width: 100vw;
@@ -471,4 +474,202 @@ body {
   to {
     width: 100%;
   }
+}
+dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  overflow: hidden;
+}
+
+.login__modal {
+  width: 750px;
+  height: 600px;
+  border: none;
+  background-color: rgb(253, 222, 53);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.login__closeWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3rem;
+  font-size: 5rem;
+  color: #0f2e0f;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: transform 0.4s, opacity 0.4s;
+}
+.login__closeWrapper:hover {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+.login__inputsWrapper {
+  margin-top: 5rem;
+}
+.login__input {
+  width: 400px;
+  margin: 3rem;
+  padding: 2rem;
+  height: 60px;
+  font-size: 2rem;
+  border: none;
+  border-bottom: 1px solid #0f2e0f;
+  color: #0f2e0f;
+  outline: none;
+  font-family: inherit;
+  background: linear-gradient(to right, #0f2e0f 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.5s;
+}
+.login__input:focus {
+  background-position: 0 0;
+  color: #ffffff;
+}
+.login__checkboxWrapper {
+  margin: 3rem;
+  margin-top: 1rem;
+  display: flex;
+  width: 400px;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+.login__checkboxWrapper--two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login__reset {
+  display: inline;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #0f2e0f;
+  text-decoration: underline;
+  font-weight: bold;
+  opacity: 0.8;
+}
+.login__reset:focus {
+  outline: none;
+  opacity: 1;
+}
+.login__buttonsWrapper {
+  margin: 3rem;
+  margin-top: 1rem;
+}
+.login__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(34, 28, 70);
+  width: 150px;
+  height: 50px;
+  border: 3px solid #0f2e0f;
+  background-color: rgb(253, 222, 53);
+  font-family: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.4s, border 0.4s, box-shadow 0.4s, color 0.4s;
+}
+.login__button:hover {
+  background-color: #0f2e0f;
+  border: 3px solid rgb(253, 222, 53);
+  color: #ffffff;
+  box-shadow: 8px 8px 8px 5px rgba(0, 0, 0, 0.4);
+}
+.login__button:focus {
+  outline: none;
+  background-color: #0f2e0f;
+  border: 3px solid rgb(253, 222, 53);
+  color: #ffffff;
+  box-shadow: 8px 8px 8px 5px rgba(0, 0, 0, 0.4);
+}
+.login__createAccountWrapper {
+  margin: 3rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+.login__createAccount {
+  font-size: 2rem;
+}
+.login__register {
+  display: inline;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #0f2e0f;
+  text-decoration: underline;
+  font-weight: bold;
+  opacity: 0.8;
+}
+.login__register:focus {
+  outline: none;
+  opacity: 1;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
+}
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #0f2e0f;
+}
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkbox-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #0f2e0f;
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
+}
+.checkbox-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
+}
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #0f2e0f;
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
 }/*# sourceMappingURL=main.css.map */

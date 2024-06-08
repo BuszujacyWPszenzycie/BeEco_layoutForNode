@@ -16,6 +16,7 @@
     rel="stylesheet">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <link rel="stylesheet" href="/public/css/main.css">
   <title>BeEco - segreguj razem z nami</title>
 </head>
@@ -60,12 +61,48 @@
       </div>
 
       <div class="nav__itemWrapper">
-        <a href="" class="nav__item"><i class="ph ph-user nav__icon"></i>
+        <a class="nav__item"><i class="ph ph-user nav__icon"></i>
           <p class="nav__text">logowanie</p>
         </a>
       </div>
 
     </nav>
+
+
+    <dialog>
+      <form method="dialog" class="login__modal">
+        <div class="login__closeWrapper">
+          <i class="fa-solid fa-xmark login__icon"></i>
+        </div>
+
+        <div class="login__inputsWrapper">
+          <input type="mail" class="login__input" placeholder="Mail">
+          <input type="password" class="login__input" placeholder="Hasło">
+        </div>
+
+        <div class="login__checkboxWrapper">
+          <div class="login__checkboxWrapper--two">
+            <!-- From Chat GPT - analyze this code -->
+            <label class="checkbox-container" for="checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox" checked>
+              <span class="checkmark"></span>
+              Zapamiętaj mnie
+            </label>
+          </div>
+          <div class="login__checkboxWrapper--three">
+            <a href="" class="login__reset">Resetuj hasło</a>
+          </div>
+        </div>
+
+        <div class="login__buttonsWrapper">
+          <button class="login__button">Zaloguj</button>
+        </div>
+
+        <div class="login__createAccountWrapper">
+          <p class="login__createAccount">Nie masz konta? </p><a href="" class="login__register">Zarejestruj się!</a>
+        </div>
+      </form>
+    </dialog>
 
   </header>
 
@@ -159,21 +196,21 @@
 
       <div class="contact__right">
         <div class="contact__iconWrapper" data-aos="fade-left" data-aos-duration="1000">
-          <i class="ph ph-facebook-logo contact__icon"></i>
+          <a href="" class="contact__link"></a>><i class="ph ph-facebook-logo contact__icon"></i></a>
         </div>
 
         <div class="contact__iconWrapper" data-aos="fade-left" data-aos-duration="1500">
-          <i class="ph ph-x-logo contact__icon"></i>
+          <a href="" class="contact__link"></a>><i class="ph ph-x-logo contact__icon"></i></a>
         </div>
 
 
         <div class="contact__iconWrapper" data-aos="fade-left" data-aos-duration="1000">
-          <i class="ph ph-linkedin-logo contact__icon"></i>
+          <a href="" class="contact__link"></a>><i class="ph ph-linkedin-logo contact__icon"></i></a></i>
         </div>
 
 
         <div class="contact__iconWrapper" data-aos="fade-left" data-aos-duration="1500">
-          <i class="ph ph-instagram-logo contact__icon"></i>
+          <a href="" class="contact__link"><i class="ph ph-instagram-logo contact__icon"></i></a>
         </div>
 
       </div>
@@ -183,30 +220,33 @@
 
   <footer class="footer">
     <div class="footer__item">
-      <p class="footer__name">Ikony: </p><a href="https://fontawesome.com/"
-        class="footer__link">fontawesome</a>&nbsp;&&nbsp;<a href="https://phosphoricons.com/"
-        class="footer__link">Phosphoricons</a>
+      <p class="footer__name">Ikony: </p><a href="https://fontawesome.com/" class="footer__link"
+        target="_blank">fontawesome</a>&nbsp;&&nbsp;<a href="https://phosphoricons.com/" class="footer__link"
+        target="_blank">Phosphoricons</a>
 
     </div>
 
     <div class="footer__item">
-      <p class="footer__name">Czcionka: </p><a href="https://fonts.google.com/" class="footer__link">Google Fonts</a>
+      <p class="footer__name">Czcionka: </p><a href="https://fonts.google.com/" class="footer__link"
+        target="_blank">Google Fonts</a>
     </div>
 
 
     <div class="footer__item">
       <p class="footer__name">Zdjęcia: </p><a
-        href="https://www.pexels.com/pl-pl/zdjecie/wzgorza-srodowisko-wiejski-elektrycznosc-20489776/"
+        href="https://www.pexels.com/pl-pl/zdjecie/wzgorza-srodowisko-wiejski-elektrycznosc-20489776/" target="_blank"
         class="footer__link">Pexels</a>
 
     </div>
 
     <div class="footer__item">
-      <p class="footer__name">Projekt: </p><a href="https://github.com/BuszujacyWPszenzycie"
+      <p class="footer__name">Projekt: </p><a href="https://github.com/BuszujacyWPszenzycie" target="_blank"
         class="footer__link">BuszującyWPszenżycie</a>
     </div>
 
   </footer>
+
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();

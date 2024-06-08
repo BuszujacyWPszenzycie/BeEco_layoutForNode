@@ -11,7 +11,6 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	// background-color: rgba(0, 0, 0, 0.5)	;
 }
 
 body {
@@ -20,7 +19,6 @@ body {
 	font-family: 'Jura', sans-serif;
 	background-color: $white;
 	overflow-x: hidden;
-	// background-color: rgba(0, 0, 0, 0.3);
 }
 // SECTION
 
@@ -479,6 +477,10 @@ body {
 		font-size: 10rem;
 		color: $dark-green;
 	}
+
+	&__link {
+		text-decoration: none;
+	}
 }
 
 // FOOOTER
@@ -537,5 +539,228 @@ body {
 
 	to {
 		width: 100%;
+	}
+}
+
+// LOGIN
+
+dialog {
+	position: absolute;
+	top: 0;
+	left: 0;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border: none;
+	overflow: hidden;
+}
+
+.login {
+	&__modal {
+		width: 750px;
+		height: 600px;
+		border: none;
+		background-color: $yellow;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	&__closeWrapper {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 3rem;
+		font-size: 5rem;
+		color: $dark-green;
+		cursor: pointer;
+		opacity: 0.8;
+		transition: transform 0.4s, opacity 0.4s;
+		&:hover {
+			transform: rotate(180deg);
+			opacity: 1;
+		}
+	}
+
+	&__inputsWrapper {
+		margin-top: 5rem;
+	}
+
+	&__input {
+		width: 400px;
+		margin: 3rem;
+		padding: 2rem;
+		height: 60px;
+		font-size: 2rem;
+		border: none;
+		border-bottom: 1px solid $dark-green;
+		color: $dark-green;
+		outline: none;
+		font-family: inherit;
+		background: linear-gradient(to right, $dark-green 50%, transparent 50%);
+		background-size: 200% 100%;
+		background-position: 100% 0;
+		transition: background-position 0.5s;
+		&:focus {
+			background-position: 0 0;
+			color: $white;
+		}
+	}
+
+	&__checkboxWrapper {
+		margin: 3rem;
+		margin-top: 1rem;
+		display: flex;
+		width: 400px;
+		height: 50px;
+		justify-content: space-between;
+		align-items: center;
+
+		&--two {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__reset {
+		display: inline;
+		text-decoration: none;
+		font-size: 2rem;
+		color: $dark-green;
+		text-decoration: underline;
+		font-weight: bold;
+		opacity: 0.8;
+		&:focus {
+			outline: none;
+			opacity: 1;
+		}
+	}
+
+	&__buttonsWrapper {
+		margin: 3rem;
+		margin-top: 1rem;
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $navy;
+		width: 150px;
+		height: 50px;
+		border: 3px solid $dark-green;
+		background-color: $yellow;
+		font-family: inherit;
+		font-size: 1.5rem;
+		cursor: pointer;
+		transition: background-color 0.4s, border 0.4s, box-shadow 0.4s, color 0.4s;
+
+		&:hover {
+			background-color: $dark-green;
+			border: 3px solid $yellow;
+			color: $white;
+			box-shadow: 8px 8px 8px 5px rgb(0, 0, 0, 0.4);
+		}
+
+		&:focus {
+			outline: none;
+			background-color: $dark-green;
+			border: 3px solid $yellow;
+			color: $white;
+			box-shadow: 8px 8px 8px 5px rgb(0, 0, 0, 0.4);
+		}
+	}
+
+	&__createAccountWrapper {
+		margin: 3rem;
+		margin-top: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 400px;
+		// background-color: red;
+	}
+
+	&__createAccount {
+		font-size: 2rem;
+	}
+
+	&__register {
+		display: inline;
+		text-decoration: none;
+		font-size: 2rem;
+		color: $dark-green;
+		text-decoration: underline;
+		font-weight: bold;
+		opacity: 0.8;
+		&:focus {
+			outline: none;
+			opacity: 1;
+		}
+	}
+}
+
+dialog::backdrop {
+	background-color: rgb(0, 0, 0, 0.9);
+}
+
+// CHECKBOX
+
+.checkbox-container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	cursor: pointer;
+	font-size: 2rem;
+	user-select: none;
+
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+		box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
+
+		&:checked ~ .checkmark {
+			background-color: $dark-green;
+
+			&:after {
+				display: block;
+			}
+		}
+	}
+
+	.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 25px;
+		width: 25px;
+		background-color: $dark-green;
+		box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
+
+		&:after {
+			content: '';
+			position: absolute;
+			display: none;
+			left: 9px;
+			top: 5px;
+			width: 5px;
+			height: 10px;
+			border: solid white;
+			border-width: 0 3px 3px 0;
+			transform: rotate(45deg);
+			box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
+		}
+	}
+
+	&:hover input ~ .checkmark {
+		background-color: $dark-green;
+		box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
 	}
 }
