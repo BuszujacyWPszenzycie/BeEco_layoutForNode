@@ -9,7 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/288c8cccc3.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Pangolin&family=Reenie+Beanie&display=swap"
+    rel="stylesheet">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="/public/css/main.css">
   <title>BeEco - segreguj razem z nami</title>
 </head>
@@ -18,117 +24,80 @@
 
   <header class="header">
 
-    <div class="header__top">
-      <div class="header__container">
-        <div class="header__container--left"></div>
+    <div class="header__image"></div>
+    <div class="header__shadow"></div>
+    <div class="header__textWrapper">
+      <div class="header__titleWrapper">
+        <h1 class="header__title header__title--white" data-aos="fade-left" data-aos-duration="1000">Bądź&nbsp</h1>
+        <h1 class="header__title header__title--yellow" data-aos="fade-left" data-aos-duration="1000">Eko!</h1>
+      </div>
+      <div class="header__subtitleWrapper">
+        <h2 class="header__subtitle header__subtitle--yellow" data-aos="fade-left" data-aos-duration="2000">
+          Segreguj&nbsp</h2>
+        <h2 class="header__subtitle header__subtitle--white" data-aos="fade-left" data-aos-duration="2000">Śmieci</h2>
+      </div>
 
-        <a href=" #" class="header__container--center">
-          <i class=" fa-solid fa-leaf header__icon"></i>
-          <h1 class="header__title"><span class="header__title--span">Be</span>Eco</h1>
+    </div>
+
+
+    <nav class="nav nav__desktop">
+      <div class="nav__itemWrapper">
+        <a href="#about" class="nav__item"><i class="ph ph-identification-card nav__icon"></i></i>
+          <p class="nav__text">o nas</p>
         </a>
-
-        <div class="header__container--right"></div>
       </div>
 
-      <nav class="nav nav__desktop">
-
-        <div class="nav__container">
-          <div class="nav__container--left"></div>
-          <div class="nav__container--center">
-            <a href="#about" class="nav__item">o nas</a>
-          </div>
-          <div class="nav__container--right"></div>
-        </div>
-
-        <div class="nav__container">
-          <div class="nav__container--left"></div>
-          <div class="nav__container--center">
-            <a href="#search" class="nav__item">wyszukiwarka</a>
-          </div>
-          <div class="nav__container--right"></div>
-        </div>
-
-        <div class="nav__container">
-          <div class="nav__container--left"></div>
-          <div class="nav__container--center">
-            <a href="#contact" class="nav__item">kontakt</a>
-          </div>
-          <div class="nav__container--right"></div>
-        </div>
-
-
-        <div class="nav__container">
-          <div class="nav__container--left"></div>
-          <div class="nav__container--center">
-            <a href="" class="nav__item"><i class="fa-regular fa-user nav__icon"></i></a>
-          </div>
-          <div class="nav__container--right"></div>
-        </div>
-      </nav>
-
-    </div>
-
-    <div class="header__bottom">
-      <div class="header__bottom--image"></div>
-      <div class="header__bottom--shadow"></div>
-      <div class="header__bottom--textWrapper active-text-wrapper">
-        <div class="header__bottom--textFittingContainer active-header-fitting-container">
-          <h1 class="header__bottom--title">Chcesz z nami posprzątać świat? To nigdy nie było tak łatwe</h1>
-          <h3 class="header__bottom--subtitle">
-            Segregowanie śmieci pomaga w ochronie środowiska poprzez zmniejszenie ilości odpadów trafiających na
-            składowiska i umożliwienie recyklingu materiałów, co oszczędza zasoby naturalne. Ponadto, odpowiednia
-            segregacja odpadów może prowadzić do zmniejszenia emisji gazów cieplarnianych, co ma pozytywny wpływ na
-            walkę
-            ze zmianami klimatycznymi.</h3>
-          <h3 class="header__bottom--subtitle">Zróbmy to razem!</h3>
-        </div>
-
-        <div class="login__modal">
-
-          <div class="login__inputWrapper">
-            <input type="text" name="" id="" placeholder="Mail" class="login__input">
-            <input type="password" name="" id="" placeholder="Hasło" class="login__input">
-            <div class="login__checkboxWrapper">
-              <label for="" class="login__label">Zapamiętaj mnie</label><input type="checkbox" class="login__checkbox">
-              <a href="" class="login__reset">Resetuj hasło</a>
-            </div>
-            <p class="login__register">Nie masz konta? <a href="" class="login__registerLink">Zarejestruj się</a></p>
-          </div>
-        </div>
-
+      <div class="nav__itemWrapper">
+        <a href="#search" class="nav__item"><i class="ph ph-magnifying-glass nav__icon"></i></i>
+          <p class="nav__text">wyszukiwarka</p>
+        </a>
       </div>
-    </div>
+
+      <div class="nav__itemWrapper">
+        <a href="#contact" class="nav__item"><i class="ph ph-address-book nav__icon"></i></i>
+          <p class="nav__text">kontakt</p>
+        </a>
+      </div>
+
+      <div class="nav__itemWrapper">
+        <a href="" class="nav__item"><i class="ph ph-user nav__icon"></i>
+          <p class="nav__text">logowanie</p>
+        </a>
+      </div>
+
+    </nav>
+
   </header>
 
   <main class="main">
     <section class="section about" id="about">
 
-      <div class="card__wrapper">
+      <div class="card__wrapper" data-aos="flip-left" data-aos-duration="1000">>
         <div class="card__item">
           <div class="card__item--top card__item--top--one">
             <i class="fa-solid fa-magnifying-glass card__item--icon"></i>
           </div>
           <div class="card__item--bottom">
             <h3 class="card__item--title">Praktyczna wyszukiwarka</h3>
+            <a href="#search" class="card__item--button">Sprawdź</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="card__wrapper" data-aos="flip-left" data-aos-duration="1500">
+        <div class="card__item">
+          <div class="card__item--top card__item--top--two">
+            <i class="fa-solid fa-chalkboard-user card__item--icon"></i>
+          </div>
+          <div class="card__item--bottom">
+            <h3 class="card__item--title">Pomocny zespół</h3>
             <a href="#contact" class="card__item--button">Sprawdź</a>
           </div>
 
         </div>
       </div>
-      <div class="card__wrapper">
-        <div class="card__item">
-          <div class="card__item--top card__item--top--two">
-            <i class="fa-solid fa-palette card__item--icon"></i>
-          </div>
-          <div class="card__item--bottom">
-            <h3 class="card__item--title">Możliwość personalizacji</h3>
-            <a href="#" class="card__item--button">Sprawdź</a>
-          </div>
 
-        </div>
-      </div>
-
-      <div class="card__wrapper">
+      <div class="card__wrapper" data-aos="flip-left" data-aos-duration="2000">
         <div class="card__item">
           <div class="card__item--top card__item--top--three">
             <i class="fa-regular fa-address-book card__item--icon"></i>
@@ -141,7 +110,7 @@
         </div>
       </div>
 
-      <div class="card__wrapper">
+      <div class="card__wrapper" data-aos="flip-left" data-aos-duration="2500">
         <div class="card__item">
           <div class="card__item--top card__item--top--four">
             <i class="fa-solid fa-users card__item--icon"></i>
@@ -189,21 +158,21 @@
       </div>
 
       <div class="contact__right">
-        <div class="contact__iconWrapper">
+        <div class="contact__iconWrapper" data-aos="fade-left" data-aos-duration="1000">
           <i class="ph ph-facebook-logo contact__icon"></i>
         </div>
 
-        <div class="contact__iconWrapper">
+        <div class="contact__iconWrapper" data-aos="fade-left" data-aos-duration="1500">
           <i class="ph ph-x-logo contact__icon"></i>
         </div>
 
 
-        <div class="contact__iconWrapper">
+        <div class="contact__iconWrapper" data-aos="fade-left" data-aos-duration="1000">
           <i class="ph ph-linkedin-logo contact__icon"></i>
         </div>
 
 
-        <div class="contact__iconWrapper">
+        <div class="contact__iconWrapper" data-aos="fade-left" data-aos-duration="1500">
           <i class="ph ph-instagram-logo contact__icon"></i>
         </div>
 
@@ -238,7 +207,10 @@
     </div>
 
   </footer>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="./js/counting.js"></script>
   <script src="/js/script.js"></script>
 </body>
