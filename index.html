@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  <div class="body__shadow"></div>
 
   <header class="header">
 
@@ -95,7 +96,7 @@
         </div>
 
         <div class="login__buttonsWrapper">
-          <button class="login__button">Zaloguj</button>
+          <a href="/user.html" class="login__button--link"><button class="login__button">Zaloguj</button></a>
         </div>
 
         <div class="login__createAccountWrapper">
@@ -182,6 +183,12 @@
           <p class="search__text">ponowień</p>
         </div>
       </div>
+
+      <dialog open>
+        <form method="dialog" class="browser__results">
+          <button>Ok</button>
+        </form>
+      </dialog>
     </section>
 
     <section class="section contact" id="contact">

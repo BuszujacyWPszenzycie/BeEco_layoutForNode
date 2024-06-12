@@ -17,6 +17,7 @@ body {
   font-family: "Jura", sans-serif;
   background-color: #ffffff;
   overflow-x: hidden;
+  position: relative;
 }
 
 .header {
@@ -234,6 +235,7 @@ body {
   right: 10px;
   transform: translate(-50%, -50%);
   font-size: 3rem;
+  color: #0f2e0f;
   opacity: 0.5;
 }
 .search__button:focus {
@@ -581,6 +583,9 @@ dialog {
   cursor: pointer;
   transition: background-color 0.4s, border 0.4s, box-shadow 0.4s, color 0.4s;
 }
+.login__button--link {
+  text-decoration: none;
+}
 .login__button:hover {
   background-color: #0f2e0f;
   border: 3px solid rgb(253, 222, 53);
@@ -672,4 +677,10 @@ dialog::backdrop {
 .checkbox-container:hover input ~ .checkmark {
   background-color: #0f2e0f;
   box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
+}
+
+.browser__results {
+  width: 100px;
+  height: 100px;
+  background-color: red;
 }/*# sourceMappingURL=main.css.map */

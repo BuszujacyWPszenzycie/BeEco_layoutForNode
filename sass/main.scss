@@ -19,7 +19,9 @@ body {
 	font-family: 'Jura', sans-serif;
 	background-color: $white;
 	overflow-x: hidden;
+	position: relative;
 }
+
 // SECTION
 
 // HEADER
@@ -277,6 +279,7 @@ body {
 		right: 10px;
 		transform: translate(-50%, -50%);
 		font-size: 3rem;
+		color: $dark-green;
 		opacity: 0.5;
 		&:focus {
 			outline: none;
@@ -659,6 +662,10 @@ dialog {
 		cursor: pointer;
 		transition: background-color 0.4s, border 0.4s, box-shadow 0.4s, color 0.4s;
 
+		&--link {
+			text-decoration: none;
+		}
+
 		&:hover {
 			background-color: $dark-green;
 			border: 3px solid $yellow;
@@ -762,5 +769,15 @@ dialog::backdrop {
 	&:hover input ~ .checkmark {
 		background-color: $dark-green;
 		box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.4);
+	}
+}
+
+// SEARCH --> RESULTS
+
+.browser {
+	&__results {
+		width: 100px;
+		height: 100px;
+		background-color: red;
 	}
 }
