@@ -237,9 +237,16 @@ body {
   font-size: 3rem;
   color: #0f2e0f;
   opacity: 0.5;
+  border: none;
+  background-color: transparent;
+  transform: opacity 0.4s;
+  cursor: pointer;
 }
 .search__button:focus {
   outline: none;
+  opacity: 1;
+}
+.search__button:hover {
   opacity: 1;
 }
 .search__input {
@@ -680,7 +687,14 @@ dialog::backdrop {
 }
 
 .browser__results {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  width: 1000px;
+  height: 1000px;
+  background-color: rgb(253, 222, 53);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
 }/*# sourceMappingURL=main.css.map */

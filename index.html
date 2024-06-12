@@ -17,12 +17,12 @@
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="/public/css/spiner.css">
   <link rel="stylesheet" href="/public/css/main.css">
   <title>BeEco - segreguj razem z nami</title>
 </head>
 
 <body>
-  <div class="body__shadow"></div>
 
   <header class="header">
 
@@ -166,7 +166,7 @@
     <section class="section search" id="search">
       <div class="search__wrapper">
         <input type="text" class="search__input" placeholder="Wyszukaj...">
-        <a href="" class="search__button"><i class="fa-solid fa-magnifying-glass search__icon"></i></a>
+        <button class="search__button"><i class="fa-solid fa-magnifying-glass search__icon"></i></button>
       </div>
 
       <div class="search__iconsWrapper">
@@ -184,9 +184,16 @@
         </div>
       </div>
 
-      <dialog open>
+      <dialog>
         <form method="dialog" class="browser__results">
-          <button>Ok</button>
+          <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <button class="browser__button">Ok</button>
         </form>
       </dialog>
     </section>
@@ -210,11 +217,9 @@
           <a href="" class="contact__link"></a>><i class="ph ph-x-logo contact__icon"></i></a>
         </div>
 
-
         <div class="contact__iconWrapper" data-aos="fade-left" data-aos-duration="1000">
           <a href="" class="contact__link"></a>><i class="ph ph-linkedin-logo contact__icon"></i></a></i>
         </div>
-
 
         <div class="contact__iconWrapper" data-aos="fade-left" data-aos-duration="1500">
           <a href="" class="contact__link"><i class="ph ph-instagram-logo contact__icon"></i></a>

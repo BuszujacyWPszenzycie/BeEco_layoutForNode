@@ -281,8 +281,16 @@ body {
 		font-size: 3rem;
 		color: $dark-green;
 		opacity: 0.5;
+		border: none;
+		background-color: transparent;
+		transform: opacity 0.4s;
+		cursor: pointer;
 		&:focus {
 			outline: none;
+			opacity: 1;
+		}
+
+		&:hover {
 			opacity: 1;
 		}
 	}
@@ -776,8 +784,15 @@ dialog::backdrop {
 
 .browser {
 	&__results {
-		width: 100px;
-		height: 100px;
-		background-color: red;
+		width: 1000px;
+		height: 1000px;
+		background-color: $yellow;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
+}
+
+dialog::backdrop {
+	background-color: rgb(0, 0, 0, 0.9);
 }
